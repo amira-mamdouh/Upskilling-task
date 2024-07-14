@@ -1,40 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --mainColor: #6d91ee;
+  --smallHeadingColor: #324473;
+  --footerColor: #0c1e49;
+}
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  color: var(--mainColor);
+  font-weight: 900;
+  font-size: 4rem;
+  line-height: 5.5938rem;
+}
+
+/* heading before & after */
 .heading-container {
-  padding: 5px 10px;
+  padding: 5px 5px;
   position: relative;
   display: inline-block;
 }
 
-.heading-container::before,
-.heading-container::after,
-.heading-container .corner::before,
-.heading-container .corner::after {
+.corner1::before,
+.corner1::after,
+.corner2::before,
+.corner2::after {
   content: "";
   position: absolute;
   width: 25px;
   height: 2px;
-  background-color: #6495ed;
+  background-color: var(--mainColor);
 }
 
-.heading-container::before {
+.corner1::before {
   top: 0;
   left: 0;
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.heading-container::after {
+.corner1::after {
   top: 0;
   right: 0;
   transform: translate(50%, -50%) rotate(45deg);
 }
 
-.heading-container .corner::before {
+.corner2::before {
   bottom: 0;
   left: 0;
   transform: translate(-50%, 50%) rotate(45deg);
 }
 
-.heading-container .corner::after {
+.corner2::after {
   bottom: 0;
   right: 0;
   transform: translate(50%, 50%) rotate(-45deg);
+}
+
+.services .card {
+  box-shadow: 0 10px 30px 0 rgba(16, 51, 30, 0.1);
+  border: 0;
+  /* width: 24.0625rem;
+  height: 31.5rem; */
+}
+
+.services .card-title {
+  color: var(--smallHeadingColor);
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.services .card-text {
+  color: var(--smallHeadingColor);
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
