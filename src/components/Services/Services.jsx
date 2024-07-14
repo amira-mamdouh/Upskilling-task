@@ -8,13 +8,13 @@ export default function Services() {
       <section className="services">
         <div className="container py-5">
           <div className="text-center">
-            <div className="heading-container mb-5">
+            <div className="heading-container">
               <div className="corner1"></div>
               <div className="corner2"></div>
               <h2>Services</h2>
             </div>
           </div>
-          <div className="row g-3">
+          <div className="row g-3 my-5">
             <div className="col-md-4 col-sm-6 col-12">
               <div className="card">
                 <img src={Img1} className="card-img-top" alt="..." />
@@ -57,6 +57,9 @@ export default function Services() {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="button d-flex justify-content-center mt-3">
+            <button className="btn btn-helpme">Help Me</button>
           </div>
         </div>
       </section>

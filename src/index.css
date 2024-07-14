@@ -20,6 +20,15 @@ h2 {
   line-height: 5.5938rem;
 }
 
+.btn-helpme {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  width: 17.5rem;
+  height: 5.375rem;
+  border-radius: 4.4375rem;
+}
+
 /* heading before & after */
 .heading-container {
   padding: 5px 5px;
@@ -81,4 +90,9 @@ h2 {
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.services .btn-helpme {
+  background-color: var(--mainColor);
+  color: #fff;
 }
