@@ -13,11 +13,19 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-h2 {
-  color: var(--mainColor);
+h2,
+h3 {
   font-weight: 900;
   font-size: 4rem;
   line-height: 5.5938rem;
+}
+
+h2 {
+  color: #fff;
+}
+
+h3 {
+  color: var(--mainColor);
 }
 
 .btn-helpme {
@@ -70,7 +78,31 @@ h2 {
   right: 0;
   transform: translate(50%, 50%) rotate(-45deg);
 }
+/* About */
+.about {
+  background-image: url("./assets/Rectangle 262.png");
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+}
 
+.about-container p {
+  width: 33.625rem;
+}
+
+.where {
+  background-image: url("./assets/Vector 8.png");
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  direction: rtl;
+}
+
+.where-container {
+  width: 30.875rem;
+}
+
+/* Services */
 .services .card {
   box-shadow: 0 10px 30px 0 rgba(16, 51, 30, 0.1);
   border: 0;

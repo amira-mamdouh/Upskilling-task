@@ -11,7 +11,7 @@ export default function Services() {
             <div className="heading-container">
               <div className="corner1"></div>
               <div className="corner2"></div>
-              <h2>Services</h2>
+              <h3>Services</h3>
             </div>
           </div>
           <div className="row g-3 my-5">
