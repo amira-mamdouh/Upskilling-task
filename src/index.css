@@ -90,16 +90,51 @@ h3 {
   width: 33.625rem;
 }
 
+.about-img {
+  max-width: 25rem;
+}
+
 .where {
   background-image: url("./assets/Vector 8.png");
   background-position: center center;
   background-size: cover;
   height: 100vh;
   direction: rtl;
+  max-width: 920px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .where-container {
   width: 30.875rem;
+}
+
+@media (max-width: 768px) {
+  .about {
+    height: auto;
+  }
+
+  .about-container p {
+    width: 100%;
+  }
+
+  .about-img {
+    width: 100%;
+    text-align: center;
+  }
+
+  .where {
+    position: relative;
+    direction: ltr;
+    height: auto;
+  }
+
+  .where-container {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 /* Services */

@@ -2,24 +2,26 @@ import Img from "../../assets/Rectangle 263.png";
 
 export default function About() {
   return (
-    <>
-      <div className="all-about-content position-relative">
-        <section className="about py-3">
-          <div className="container">
-            <div className="about-container">
-              <h2>About Us</h2>
-              <p className="text-white">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry standard dummy text
-                ever since the 1500s, when an
-              </p>
-              <img src={Img} alt="Rectangle" />
+    <div className="all-about-content position-relative">
+      <section className="about py-3">
+        <div className="container">
+          <div className="about-container">
+            <h2>About Us</h2>
+            <p className="text-white">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry standard dummy text
+              ever since the 1500s, when an
+            </p>
+            <div className="about-img">
+              <img className="w-100" src={Img} alt="Rectangle" />
             </div>
           </div>
-        </section>
-        <section className="where position-absolute top-0 end-0 w-75">
-          <div className="where-container p-5">
-            <h2>Where</h2>
+        </div>
+      </section>
+      <section className="where">
+        <div className="container">
+          <div className="where-container p-md-5">
+            <h2 className="pt-5">Where</h2>
             <p className="text-white">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry standard dummy text
@@ -33,8 +35,8 @@ export default function About() {
               Lorem Ipsum.
             </p>
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+    </div>
   );
 }
