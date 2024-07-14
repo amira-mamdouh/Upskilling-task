@@ -1,4 +1,5 @@
 import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
 import Services from "./components/Services/Services";
 
 export default function App() {
@@ -6,6 +7,7 @@ export default function App() {
     <>
       <About />
       <Services />
+      <Contact />
     </>
   );
 }
