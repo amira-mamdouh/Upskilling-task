@@ -6,20 +6,23 @@
   --footerColor: #0c1e49;
   --inputColor: #cedcff;
   --bgmainColor: #fcfcfc;
-}
-html {
-  font-size: 16px;
+  --baseFontSize: 16px;
 }
 
 body {
   font-family: "Poppins", sans-serif;
+  font-size: calc(var(--baseFontSize) + 0.5vw);
+}
+
+html {
+  font-size: 100%; /* 1rem = 16px */
 }
 
 h2,
 h3 {
   font-weight: 900;
-  font-size: 4rem;
-  line-height: 5.5938rem;
+  font-size: 2.5rem; /* 2.5 * 16px = 40px */
+  line-height: 1.5em; /* 1.5 * 2.5rem = 3.75rem = 60px */
 }
 
 h2 {
@@ -30,18 +33,23 @@ h3 {
   color: var(--mainColor);
 }
 
+p,
+.error {
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
 .btn-helpme {
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 2.25rem;
-  width: 17.5rem;
-  height: 5.375rem;
+  padding: 0.625rem 1.5625rem;
   border-radius: 4.4375rem;
 }
 
 /* heading before & after */
 .heading-container {
-  padding: 5px 5px;
+  padding: 0.5rem;
   position: relative;
   display: inline-block;
 }
@@ -52,7 +60,7 @@ h3 {
 .corner2::after {
   content: "";
   position: absolute;
-  width: 25px;
+  width: 1em;
   height: 2px;
   background-color: var(--mainColor);
 }
@@ -80,6 +88,7 @@ h3 {
   right: 0;
   transform: translate(50%, 50%) rotate(-45deg);
 }
+
 /* About */
 .about {
   background-image: url("./assets/Rectangle 262.png");
@@ -89,11 +98,11 @@ h3 {
 }
 
 .about-container p {
-  width: 33.625rem;
+  width: 33.625rem; /* 33.625 * 16px = 538px */
 }
 
 .about-img {
-  max-width: 25rem;
+  max-width: 25rem; /* 25 * 16px = 400px */
 }
 
 .where {
@@ -110,7 +119,7 @@ h3 {
 }
 
 .where-container {
-  width: 30.875rem;
+  width: 30.875rem; /* 30.875 * 16px = 494px */
 }
 
 @media (max-width: 768px) {
@@ -151,15 +160,15 @@ h3 {
 .services .card-title {
   color: var(--smallHeadingColor);
   font-weight: 900;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1rem; /* 16px */
+  line-height: 1.5rem; /* 24px */
 }
 
 .services .card-text {
   color: var(--smallHeadingColor);
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.25rem; /* 20px */
 }
 
 .services .btn-helpme {
@@ -170,13 +179,13 @@ h3 {
 /* Contact */
 .contact form input {
   background-color: var(--inputColor);
-  border-radius: 61px;
+  border-radius: 3.8125rem; /* 3.8125 * 16px = 61px */
 }
 
 .button .btn {
   border: 2px solid var(--mainColor);
-  border-radius: 61px;
-  padding: 10px 64px;
+  border-radius: 3.8125rem; /* 3.8125 * 16px = 61px */
+  padding: 0.625rem 4rem; /* 10px 64px */
 }
 
 .button .btn:hover {
@@ -184,16 +193,17 @@ h3 {
   background-color: var(--mainColor);
   color: #fff;
 }
+
 .email-icon,
 .phone-icon {
   color: var(--mainColor);
-  margin-right: 10px;
+  margin-right: 0.625rem; /* 10px */
 }
 
 /* Footer */
 footer {
   background-color: var(--footerColor);
-  height: 145px;
+  height: 9.0625rem; /* 145px */
 }
 
 /* testymonials */
@@ -205,13 +215,13 @@ footer {
 .testymonials h5 {
   color: var(--mainColor);
   font-weight: 700;
-  line-height: 22px;
+  line-height: 1.375rem; /* 22px */
 }
 
 .inner {
   border: 2px solid var(--mainColor);
-  padding: 20px;
-  border-radius: 40px;
+  padding: 1.25rem; /* 20px */
+  border-radius: 2.5rem; /* 40px */
   background-color: #fff;
 }
 

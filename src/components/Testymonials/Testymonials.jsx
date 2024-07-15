@@ -16,14 +16,14 @@ export default function Testymonials() {
           <div className="row g-4">
             <div className="col-md-6">
               <div className="inner d-flex">
-                <div className="avatar me-3">
+                <div className="avatar mb-3">
                   <img
                     className="w-100 rounded-circle "
                     src={Img}
                     alt="person"
                   />
                 </div>
-                <div className="testymonials-content">
+                <div className="testymonials-content ms-3">
                   <h5>Courtney Henry</h5>
                   <p>
                     Lorem Ipsum is simply dummy text of the printing and
@@ -44,14 +44,14 @@ export default function Testymonials() {
             </div>
             <div className="col-md-6">
               <div className="inner d-flex">
-                <div className="avatar me-3">
+                <div className="avatar">
                   <img
                     className="w-100 rounded-circle"
                     src={Img}
                     alt="person"
                   />
                 </div>
-                <div className="testymonials-content">
+                <div className="testymonials-content ms-3">
                   <h5>Courtney Henry</h5>
                   <p>
                     Lorem Ipsum is simply dummy text of the printing and
@@ -72,14 +72,14 @@ export default function Testymonials() {
             </div>
             <div className="col-md-6">
               <div className="inner d-flex">
-                <div className="avatar me-3">
+                <div className="avatar">
                   <img
                     className="w-100 rounded-circle"
                     src={Img}
                     alt="person"
                   />
                 </div>
-                <div className="testymonials-content">
+                <div className="testymonials-content ms-3">
                   <h5>Courtney Henry</h5>
                   <p>
                     Lorem Ipsum is simply dummy text of the printing and
@@ -100,14 +100,14 @@ export default function Testymonials() {
             </div>
             <div className="col-md-6">
               <div className="inner d-flex">
-                <div className="avatar me-3">
+                <div className="avatar">
                   <img
                     className="w-100 rounded-circle"
                     src={Img}
                     alt="person"
                   />
                 </div>
-                <div className="testymonials-content">
+                <div className="testymonials-content ms-3">
                   <h5>Courtney Henry</h5>
                   <p>
                     Lorem Ipsum is simply dummy text of the printing and

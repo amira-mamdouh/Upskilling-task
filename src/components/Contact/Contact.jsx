@@ -167,7 +167,7 @@ export default function Contact() {
           </div>
           <div className="col-md-6 col-12">
             <div className="content d-flex justify-content-center flex-column h-100 px-5 ">
-              <div className="email d-flex align-items-center">
+              <div className="email d-flex align-items-center mb-4">
                 <MdEmail className="email-icon" />
                 <p className="mb-0">Email: upskilling@gmail.com</p>
               </div>
