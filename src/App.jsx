@@ -5,8 +5,8 @@ import Services from "./components/Services/Services";
 export default function App() {
   return (
     <>
-      <About />
-      <Services />
+      {/* <About />
+      <Services /> */}
       <Contact />
     </>
   );

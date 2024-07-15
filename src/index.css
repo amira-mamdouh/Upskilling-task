@@ -4,6 +4,7 @@
   --mainColor: #6d91ee;
   --smallHeadingColor: #324473;
   --footerColor: #0c1e49;
+  --inputColor: #cedcff;
 }
 html {
   font-size: 16px;
@@ -160,6 +161,24 @@ h3 {
 }
 
 .services .btn-helpme {
+  background-color: var(--mainColor);
+  color: #fff;
+}
+
+/* Contact */
+.contact form input {
+  background-color: var(--inputColor);
+  border-radius: 61px;
+}
+
+.button .btn {
+  border: 2px solid var(--mainColor);
+  border-radius: 61px;
+  padding: 10px 64px;
+}
+
+.button .btn:hover {
+  border: 2px solid var(--inputColor);
   background-color: var(--mainColor);
   color: #fff;
 }

@@ -14,13 +14,16 @@ const mySchema = yup.object({
   phone: yup
     .string()
     .required("Phone number is required")
-    .matches(/^[0-9]+$/, "Phone number must be numeric"),
+    .matches(/^[0-9]+$/, "Phone number must be numeric")
+    .min(10, "Too Short!"),
 });
 
 export default function Contact() {
-  const [isSuccess, setIsSuccess] = useState(false);
-  const [isUnSuccess, setUnIsSuccess] = useState(undefined);
-  const [isLoading, setIsLoading] = useState(false);
+  const [formStatus, setFormStatus] = useState({
+    isSuccess: false,
+    isUnSuccess: undefined,
+    isLoading: false,
+  });
 
   const userData = {
     name: "",
@@ -32,28 +35,30 @@ export default function Contact() {
     initialValues: userData,
     validationSchema: mySchema,
     onSubmit: (values) => {
-      setIsLoading(true);
+      setFormStatus({
+        isLoading: true,
+        isSuccess: false,
+        isUnSuccess: undefined,
+      });
       axios
         .post(`http://upskilling-egypt.com:3001/contact`, values)
         .then(() => {
-          setIsSuccess(true);
+          setFormStatus({ isSuccess: true, isLoading: false });
           setTimeout(() => {
-            setIsSuccess(false);
+            setFormStatus({ isSuccess: false, isLoading: false });
           }, 3000);
-          setIsLoading(false);
         })
         .catch((errors) => {
+          let errorMsg = "An error occurred. Please try again.";
           if (errors.response) {
-            setUnIsSuccess(errors.response.data.message);
+            errorMsg = errors.response.data.errors[0].msg;
           } else if (errors.request) {
-            setUnIsSuccess("Network error, please try again later.");
-          } else {
-            setUnIsSuccess("An error occurred. Please try again.");
+            errorMsg = "Network error, please try again later.";
           }
+          setFormStatus({ isUnSuccess: errorMsg, isLoading: false });
           setTimeout(() => {
-            setUnIsSuccess(undefined);
+            setFormStatus({ isUnSuccess: undefined, isLoading: false });
           }, 3000);
-          setIsLoading(false);
         });
     },
   });
@@ -61,15 +66,15 @@ export default function Contact() {
   return (
     <section className="contact">
       <div className="container py-5">
-        <div className="text-center">
+        <div className="text-center mb-5">
           <div className="heading-container">
             <div className="corner1"></div>
             <div className="corner2"></div>
             <h3>Contact Us</h3>
           </div>
         </div>
-        <div className="row g-3">
-          <div className="col-md-6 col-12">
+        <div className="row g-3 pt-3">
+          <div className="col-md-6 col-12 px-5">
             <form onSubmit={myFormik.handleSubmit}>
               <input
                 value={myFormik.values.name}
@@ -119,17 +124,27 @@ export default function Contact() {
                 </div>
               )}
 
-              <div className="button text-end">
-                <button className="btn" type="submit">
-                  {isLoading ? (
+              <div className="button text-center mt-3">
+                <button
+                  className="btn"
+                  type="submit"
+                  disabled={formStatus.isLoading}
+                >
+                  {formStatus.isLoading ? (
                     <ColorRing
                       visible={true}
-                      height="35"
-                      width="35"
+                      height="30"
+                      width="30"
                       ariaLabel="color-ring-loading"
                       wrapperStyle={{}}
                       wrapperClass="color-ring-wrapper"
-                      colors={["#fff", "#fff", "#fff", "#fff", "#fff"]}
+                      colors={[
+                        "#cedcff",
+                        "#cedcff",
+                        "#cedcff",
+                        "#cedcff",
+                        "#cedcff",
+                      ]}
                     />
                   ) : (
                     "Send"
@@ -139,7 +154,7 @@ export default function Contact() {
             </form>
           </div>
           <div className="col-md-6 col-12">
-            <div className="content">
+            <div className="content d-flex justify-content-center flex-column h-100 px-5 ">
               <div className="email">
                 <p>Email: upskilling@gmail.com</p>
               </div>
@@ -149,14 +164,14 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        {isSuccess && (
+        {formStatus.isSuccess && (
           <div className="success-message mt-3">
             <p className="text-success">Message sent successfully!</p>
           </div>
         )}
-        {isUnSuccess && (
+        {formStatus.isUnSuccess && (
           <div className="error-message mt-3">
-            <p className="text-danger">{isUnSuccess}</p>
+            <p className="text-danger">{formStatus.isUnSuccess}</p>
           </div>
         )}
       </div>
