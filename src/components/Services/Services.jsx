@@ -22,7 +22,7 @@ export default function Services() {
                   <h5 className="card-title">Lorem Ipsum</h5>
                   <p className="card-text">
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
+                    typesetting industry. Lorem Ipsum has been the industry
                     standard dummy text ever since the 1500s, when an unknown
                     printer took a galley of type and scrambled
                   </p>
@@ -36,7 +36,7 @@ export default function Services() {
                   <h5 className="card-title">Lorem Ipsum</h5>
                   <p className="card-text">
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
+                    typesetting industry. Lorem Ipsum has been the industry
                     standard dummy text ever since the 1500s, when an unknown
                     printer took a galley of type and scrambled
                   </p>
@@ -50,7 +50,7 @@ export default function Services() {
                   <h5 className="card-title">Lorem Ipsum</h5>
                   <p className="card-text">
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
+                    typesetting industry. Lorem Ipsum has been the industry
                     standard dummy text ever since the 1500s, when an unknown
                     printer took a galley of type and scrambled
                   </p>
