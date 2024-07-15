@@ -3,6 +3,8 @@ import axios from "axios";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import { ColorRing } from "react-loader-spinner";
+import { MdEmail } from "react-icons/md";
+import { FaPhoneAlt } from "react-icons/fa";
 
 const mySchema = yup.object({
   name: yup
@@ -151,29 +153,31 @@ export default function Contact() {
                   )}
                 </button>
               </div>
+              {formStatus.isSuccess && (
+                <div className="success-message mt-3">
+                  <p className="text-success">Message sent successfully!</p>
+                </div>
+              )}
+              {formStatus.isUnSuccess && (
+                <div className="error-message mt-3">
+                  <p className="text-danger">{formStatus.isUnSuccess}</p>
+                </div>
+              )}
             </form>
           </div>
           <div className="col-md-6 col-12">
             <div className="content d-flex justify-content-center flex-column h-100 px-5 ">
-              <div className="email">
-                <p>Email: upskilling@gmail.com</p>
+              <div className="email d-flex align-items-center">
+                <MdEmail className="email-icon" />
+                <p className="mb-0">Email: upskilling@gmail.com</p>
               </div>
-              <div className="phone">
-                <p>Phone: +20 115 493 2137</p>
+              <div className="phone d-flex align-items-center">
+                <FaPhoneAlt className="phone-icon" />
+                <p className="mb-0">Phone: +20 115 493 2137</p>
               </div>
             </div>
           </div>
         </div>
-        {formStatus.isSuccess && (
-          <div className="success-message mt-3">
-            <p className="text-success">Message sent successfully!</p>
-          </div>
-        )}
-        {formStatus.isUnSuccess && (
-          <div className="error-message mt-3">
-            <p className="text-danger">{formStatus.isUnSuccess}</p>
-          </div>
-        )}
       </div>
     </section>
   );

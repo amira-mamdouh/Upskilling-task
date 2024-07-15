@@ -182,6 +182,11 @@ h3 {
   background-color: var(--mainColor);
   color: #fff;
 }
+.email-icon,
+.phone-icon {
+  color: var(--mainColor);
+  margin-right: 10px;
+}
 
 /* Footer */
 footer {
