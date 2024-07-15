@@ -66,8 +66,8 @@ export default function Contact() {
   });
 
   return (
-    <section className="contact">
-      <div className="container py-5">
+    <section className="contact py-5">
+      <div className="container">
         <div className="text-center mb-5">
           <div className="heading-container">
             <div className="corner1"></div>
