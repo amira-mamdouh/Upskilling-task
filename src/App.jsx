@@ -9,7 +9,7 @@ export default function App() {
   return (
     <>
       <Home />
-      {/* <About /> */}
+      <About />
       <Services />
       <Testymonials />
       <Contact />
